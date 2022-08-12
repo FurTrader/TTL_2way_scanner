@@ -1,6 +1,9 @@
 # TTL_2way_sniffer
  A handy 2 way TTL serial sniffer on an ESP32
  
+ It uses 2 hardware UARTS to listen to the TX and RX lines of a BMS simultaneously,     
+ and dumps the traffic to the USB port with ascii formatting.
+ 
  The data is sent to the USB port in ascii for compatability with the arduino serial monitor,     
  reformatted to display HEX bytes with spaces between. 
 
