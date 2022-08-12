@@ -1,25 +1,27 @@
 //TTL 2 way sniffer
 //for an ESP32 devkit
 
-//pins d2 and d17 are RX
+//pins d2 and d17 are connected to the BMS-BLE serial wires 
 
 //from BLE
-#define RXD1 2
-#define TXD1 4
+#define RXD1 2 //data line from BLE module to BMS
+#define TXD1 4 //not connected to anything
 
 //from BMS
-#define RXD2 17
-#define TXD2 16
+#define RXD2 17 //data line from BMS to BLE module
+#define TXD2 16 //not connected to anything
 
 volatile bool RXorTX;
 byte inByte;
 
 void setup() {
+  //to serial console, speed can be whtever you want
   Serial.begin(115200);
   while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
+    ;
   }
 
+  //the BMS is 9600 baud
   Serial1.begin(9600, SERIAL_8N1, RXD1, TXD1);
   Serial2.begin(9600, SERIAL_8N1, RXD2, TXD2);
 
