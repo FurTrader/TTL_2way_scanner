@@ -1,4 +1,4 @@
-# TTL_2way_scanner
+# TTL_2way_sniffer
  A handy 2 way TTL serial sniffer on an ESP32
  
  The data is sent to the USB port in ascii for compatability with the arduino serial monitor,     
