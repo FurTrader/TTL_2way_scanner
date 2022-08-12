@@ -4,7 +4,7 @@
  The data is sent to the USB port in ascii for compatability with the arduino serial monitor,     
  reformatted to display HEX bytes with spaces between. 
 
-This would also work on an Arduino MEGA, just change the tx/rx pins
+This would also work on an Arduino MEGA or something else with 2 extra harware UARTs, just change the tx/rx pins
   
 ## Example output:
 ```
