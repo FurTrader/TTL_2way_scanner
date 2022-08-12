@@ -41,6 +41,8 @@ void loop() {
     Serial.print(" ");
   }
 
+  delay(10);
+  
   if (Serial1.available() && !RXorTX){
     RXorTX = true;
     Serial.println();
@@ -55,5 +57,7 @@ void loop() {
     Serial.print(inByte, HEX);
     Serial.print(" ");
   }
+
+  delay(10);
   
 }
