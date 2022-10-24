@@ -1,5 +1,7 @@
-//TTL 2 way sniffer
-//for an ESP32 devkit
+//Serial (TTL) 2 way sniffer for an Overkill Solar BMS, and possibly other things.
+//set up to run on an ESP32 devkit
+//monitors serial communication on the external devices and prints out both sides of the conversation.
+//read in HEX data and pront it out in ascii for human readability in the arduino serial monitor.
 
 //pins d2 and d17 are connected to the BMS-BLE serial wires 
 
@@ -34,6 +36,7 @@ void loop() {
     Serial.println();
     Serial.print("from BMS: ");
   }
+  delay(10);
   while (Serial2.available()) {
     inByte = char(Serial2.read());
     if ( inByte < 0x10 ){
@@ -51,6 +54,7 @@ void loop() {
     Serial.println();
     Serial.print("from BLE: ");
   }
+  delay(10);
   while (Serial1.available()) {
     inByte = char(Serial1.read());
     if ( inByte < 0x10 ){
