@@ -36,7 +36,7 @@ void loop() {
     Serial.println();
     Serial.print("from BMS: ");
   }
-  delay(10);
+
   while (Serial2.available()) {
     inByte = char(Serial2.read());
     if ( inByte < 0x10 ){
@@ -46,7 +46,7 @@ void loop() {
     Serial.print(" ");
   }
 
-  delay(10);
+
   
   if (Serial1.available() && !RXorTX){
     RXorTX = true;
@@ -54,7 +54,7 @@ void loop() {
     Serial.println();
     Serial.print("from BLE: ");
   }
-  delay(10);
+
   while (Serial1.available()) {
     inByte = char(Serial1.read());
     if ( inByte < 0x10 ){
@@ -64,6 +64,6 @@ void loop() {
     Serial.print(" ");
   }
 
-  delay(10);
+
   
 }
